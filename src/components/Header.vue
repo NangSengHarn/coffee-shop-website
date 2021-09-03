@@ -1,7 +1,7 @@
 <template>
 <div class="header">
   <a href="#" class="logo">
-    <img src="" alt="shop logo">
+    <img src="../assets/img/logo.png" alt="shop logo">
   </a>
 
   <nav class="navbar" :class="{active:showNavbar}">
