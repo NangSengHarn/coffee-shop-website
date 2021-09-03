@@ -13,16 +13,16 @@
 </template>
 
 <script>
-import getMenu from '../composable/getMenu'
+import getItem from '../composable/getItem'
 export default {
   setup(){
-    let {menu,error,addToCartItem,load}=getMenu();
+    let {menu,product,addToCartItem,load,error}=getItem();
     load();
     let addToCart=async(id)=>{
       let updateData={
           addToCart:true
         }
-        let res=await db.collection("menu").doc(id).update(updateData);
+        let res=await db.collection("sellItem").doc(id).update(updateData);
     }
     return {menu,error,addToCart}
   }

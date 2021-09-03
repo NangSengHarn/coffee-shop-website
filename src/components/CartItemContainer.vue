@@ -22,12 +22,12 @@
 </template>
 
 <script>
-import getMenu from "../composable/getMenu";
+import getItem from "../composable/getItem";
 import {db} from "../firebase/config";
 import { ref } from '@vue/reactivity';
 export default {
     setup(){
-      let {menu,error,addToCartItem,load}=getMenu();
+      let {menu,product,addToCartItem,load,error}=getItem();
       
       load();
 
@@ -35,7 +35,7 @@ export default {
         let updateData={
           addToCart:false
         }
-        let res=await db.collection("menu").doc(id).update(updateData);
+        let res=await db.collection("sellItem").doc(id).update(updateData);
         
       }
 
