@@ -18,5 +18,14 @@ export default {
 </script>
 
 <style>
-
+nav a{
+    margin:0 1rem;
+    font-size: 1.6rem;
+    color:#fff;
+}
+nav a:hover{
+    color: #d3ad7f;
+    border-bottom: .1rem solid #d3ad7f;
+    padding-bottom: .5rem;
+}
 </style>

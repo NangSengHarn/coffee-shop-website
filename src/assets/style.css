@@ -84,7 +84,7 @@ section{
     .header .navbar.active{
         right:0;
     }
-    .header .navbar a{
+    nav a{
         color: var(--black);
         display: block;
         margin: 1.5rem;

@@ -76,28 +76,18 @@ export default {
 
 <style>
 .header{
-    background: var(--bg);
+    background: #010103;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding:1.5rem 7%;
-    border-bottom: var(--border);
+    border-bottom: .1rem solid rgba(255,255,255,.3);
     position: fixed;
     top:0; left:0; right:0;
     z-index:1000;
 }
 .header .logo img{
     height: 6rem;
-}
-.header .navbar a{
-    margin:0 1rem;
-    font-size: 1.6rem;
-    color:#fff;
-}
-.header .navbar a:hover{
-    color: var(--main-color);
-    border-bottom: .1rem solid var(--main-color);
-    padding-bottom: .5rem;
 }
 .header .icons span{
     color: #fff;
@@ -106,7 +96,7 @@ export default {
     margin-left: 2rem;
 }
 .header .icons span:hover{
-    color: var(--main-color);
+    color: #d3ad7f;
 }
 #menu-btn {
     display: none;
