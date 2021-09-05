@@ -9,7 +9,7 @@
 </template>
 
 <script>
-
+import { ref } from '@vue/reactivity';
 
 export default {
 
@@ -22,7 +22,7 @@ export default {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background:url(../assets/img/home-img.jpeg)no-repeat;
+  background:url(../assets/img/home-img.jpeg) no-repeat;
   background-size: cover;
   background-position: center;
 }

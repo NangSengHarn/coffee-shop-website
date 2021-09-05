@@ -4,44 +4,30 @@ import About from '../views/About.vue'
 import Menu from '../views/Menu.vue'
 import Products from '../views/Products.vue'
 import Review from '../views/Review.vue'
+import Contact from '../views/Contact.vue'
 import Blogs from '../views/Blogs.vue'
+import Body from '../views/Body.vue'
 
 const routes = [
   {
     path:'/',
-    name:'Home',
-    component:Home
-  },
-  {
-    path:'/about',
-    name:'About',
-    component:About
-  },
-  {
-    path:'/menu',
-    name:'Menu',
-    component:Menu
-  },
-  {
-    path:'/products',
-    name:'Products',
-    component:Products
-  },
-  {
-    path:'/review',
-    name:'Review',
-    component:Review
-  },
-  {
-    path:'/blogs',
-    name:'Blogs',
-    component:Blogs
-  },
+    name:'Body',
+    component:Body
+  }
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
+  mode: 'history',
+  scrollBehavior: (to, from, savedPosition)=>{
+    if(to.hash){
+      return {el: to.hash,behavior: 'smooth'}
+    }else {
+      return {x: 0,y:0}
+    }
+    
+  }
 })
 
 export default router

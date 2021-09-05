@@ -14,6 +14,7 @@
 
 <script>
 import getItem from '../composable/getItem'
+import {db} from "../firebase/config";
 export default {
   setup(){
     let {menu,product,addToCartItem,load,error}=getItem();

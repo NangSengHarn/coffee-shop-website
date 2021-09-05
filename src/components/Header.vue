@@ -1,17 +1,13 @@
 <template>
 <div class="header">
   <a href="#" class="logo">
-    <img src="../assets/img/logo.png" alt="shop logo">
+    <img src="../assets/img/logo.png" alt="logo">
   </a>
+  <div class="navbar" :class="{active:showNavbar}">
+    <Navbar></Navbar>
+  </div>
 
-  <nav class="navbar" :class="{active:showNavbar}">
-      <router-link :to="{name:'Home'}">Home</router-link>
-      <router-link :to="{name:'About'}">About</router-link>
-      <router-link :to="{name:'Menu'}">Menu</router-link>
-      <router-link :to="{name:'Products'}">Products</router-link>
-      <router-link :to="{name:'Review'}">Review</router-link>
-      <router-link :to="{name:'Blogs'}">Blogs</router-link>
-  </nav>
+
 
   <div class="icons">
       <span class="material-icons" id="search-btn"  @click="clickSearch">
@@ -36,19 +32,23 @@
 </template>
 
 <script>
+import Navbar from './Navbar'
 import CartItemContainer from './CartItemContainer'
 import SearchForm from './SearchForm'
-import { ref } from '@vue/reactivity';
+import { ref } from '@vue/reactivity'
+
 
 export default {
   components: {
+    Navbar,
     CartItemContainer, SearchForm },
 
   setup(){
+    
     let showSF=ref(false);
     let showCIC=ref(false);
     let showNavbar=ref(false);
-    
+   
     const clickSearch=()=>{
       showSF.value=!showSF.value;
       showCIC.value=false;
@@ -68,6 +68,7 @@ export default {
     window.onscroll=()=>{
       showNavbar.value=false;
     }
+    
     return {showSF,showCIC,showNavbar,clickMenu,clickCart,clickSearch}
   }
 }

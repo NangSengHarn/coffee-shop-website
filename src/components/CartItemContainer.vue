@@ -30,7 +30,6 @@ export default {
       let {menu,product,addToCartItem,load,error}=getItem();
       
       load();
-
       let cancelItem=async(id)=>{
         let updateData={
           addToCart:false
